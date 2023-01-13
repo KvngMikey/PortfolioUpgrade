@@ -25,7 +25,7 @@ function App() {
         </ul>
         </section>
         <hr className="mx-auto bg-black dark:bg-white w-1/2" />
-        <section id="work" className="p-6 my-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
+        <section id="work" className="p-6 mt-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
         <h2 className="text-4xl font-bold text-center sm:text-5xl sm:text-left mb-6 mx-6 text-slate-900 dark:text-white">
             Works
         </h2>
