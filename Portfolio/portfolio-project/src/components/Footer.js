@@ -11,7 +11,7 @@ const Footer = () => {
     </div>
 
     <div className='flex text-center uppercase py-6 my-12 text-4xl border-y-2 border-solid border-black dark:border-white'>
-      hello - wanna work on something, hit me up - let's collaborate
+      hello -- wanna work on something, hit me up - let's collaborate
     </div>
 
     <div className='flex flex-col items-center gap-6 text-base font-medium mb-12'>
