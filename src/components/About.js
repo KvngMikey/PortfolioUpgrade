@@ -37,7 +37,7 @@ const About = () => {
             </p>
         </article> 
         <img className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 " src={deved} alt="cartoon-avatar"/>    */}
-       <span className="font-medium text-[65px] sm:text-[113px] uppercase">Front ——End  Developer</span>
+       <span className="font-bebas font-medium text-[65px] sm:text-[113px] uppercase">Front ——End  Developer</span>
        <article className='flex flex-col sm:flex-row items-center gap-8'>
         <img className="bg-gradient-to-b from-teal-500 w-96 h-40" src={deved} alt="cartoon-avatar"/>
         <span className='uppercase text-xl font-semibold tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>

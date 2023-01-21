@@ -20,8 +20,10 @@ module.exports = {
         'open-menu': 'open-menu 0.5s ease-in-out forwards'
       },
       fontFamily: {
-        burtons: 'burtons'
-      }
+        'burtons': ['burtons', 'sans-serif'],
+        'inter': ['inter', 'sans-serif'],
+        'bebas': ['"Bebas Neue"', 'sans-serif'], // Ensure fonts with spaces have " " surrounding it.
+      },
     },
   },
   plugins: [],
