@@ -20,14 +20,14 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-10">
-    <section className="max-w-4xl mx-auto p-4 flex justify-between items-center">
-        <span className="text-base uppercase font-semibold hover:opacity-90">
+    <section className="max-w-[97%] lg:max-w-[85%] mx-auto p-4 flex justify-between items-baseline text-sm lg:text-base xl:text-lg">
+        <span className="uppercase hover:opacity-90">
            <a href="#about"> 👨‍💻 Michael Ariwaodo </a>
         </span>
-        <span className="w-48 hidden sm:flex cursor-default text-base uppercase font-semibold">
+        <span className="w-52 xl:w-56 hidden sm:flex cursor-default uppercase mt-3.5">
             currently front-end developer at seech
         </span>
-        <span className="w-40 hidden sm:flex cursor-default text-base uppercase font-semibold">
+        <span className="w-32 xl:w-40 hidden sm:flex cursor-default uppercase">
             based in lagos nigeria
         </span>
         <div>
@@ -37,10 +37,10 @@ const Header = () => {
                 before:transition-all before:duration-500 
                 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500 "></div>
             </button>
-            <nav className="hidden md:block text-base font-semibold" aria-label="main">
-                <a href="#work" className="uppercase hover:opacity-90">work, </a>
-                <a href="#contact" className="uppercase hover:opacity-90">contact, </a>
-                <a href="#" className="uppercase hover:opacity-90">Resume</a>
+            <nav className="hidden md:block" aria-label="main">
+                <a href="#work" className="uppercase hover:text-orange-700">work, </a>
+                <a href="#contact" className="uppercase hover:text-orange-700">contact, </a>
+                <a href="#" className="uppercase hover:text-orange-700">Resume</a>
             </nav>
         </div>
     </section>
