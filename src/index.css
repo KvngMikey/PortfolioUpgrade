@@ -12,6 +12,11 @@
  }
 }
 
+@layer components {
+  .custom-style {
+    word-break: break-word;
+  }
+}
 
 body {
   margin: 0;
