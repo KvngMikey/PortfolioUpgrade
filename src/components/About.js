@@ -45,7 +45,7 @@ const About = () => {
        </article>
        <article className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center gap-8'>
         <img className="w-full md:w-96 h-40" src={deved} alt="cartoon-avatar"/>
-        <span className='uppercase custom-style text-2xl leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>
+        <span className='uppercase custom-style text-base md:text-2xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>
        </article> 
     </section>
   )
