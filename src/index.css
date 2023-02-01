@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --gap: 2rem;
+  --duration: 30s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
 @layer utilities {
   .section-min-height {
       min-height: calc(100vh - 68px);
@@ -15,6 +22,27 @@
 @layer components {
   .custom-style {
     word-break: break-word;
+  }
+}
+
+@layer components {
+  .marquee-group {
+    animation: scroll-left var(--duration) linear infinite;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .marquee-group {
+    animation-play-state: paused;
   }
 }
 
