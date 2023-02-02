@@ -19,11 +19,22 @@ function App() {
             Skills
         </h2>
         <div className='grid overflow-hidden items-center w-full'>
-          <ul className='list-none mx-auto flex items-center min-w-full marquee-group'>
-            {skillsData.map(skill => {
-              return <Skills key={skill.id} image={skill.img} />
-            })}
-          </ul>
+          <div className='flex'>
+            <div className='flex'>
+              <ul className='list-none flex-shrink-0 mx-auto flex items-center min-w-full marquee-group'>
+                {skillsData.map(skill => {
+                  return <Skills key={skill.id} image={skill.img} />
+                })}
+              </ul>
+            </div>
+            <div className='flex'>
+              <ul className='list-none flex-shrink-0 mx-auto flex items-center min-w-full marquee-group'>
+                {skillsData.map(skill => {
+                  return <Skills key={skill.id} image={skill.img} />
+                })}
+              </ul>
+            </div>
+          </div>
         </div>
         </section>
         <hr className="mx-auto bg-black dark:bg-white max-w-[97%]" />
