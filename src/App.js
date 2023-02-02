@@ -14,11 +14,11 @@ function App() {
       <main className="max-w-[97%] lg:max-w-[85%] mx-auto">
         <About />
         <hr className="mx-auto bg-black dark:bg-white max-w-[97%]" />
-        <section id="skills" className="p-6 my-12 scroll-mt-40">
-        <h2 className="text-4xl font-bold text-center sm:text-5xl sm:text-left mb-6 mx-6 text-slate-900 dark:text-white">
+        <section id="skills" className="mt-8 mr-8 md:mr-10 mb-20 scroll-mt-40">
+        <h2 className="text-4xl font-medium text-center sm:text-5xl sm:text-left mb-8 ml-4 text-slate-900 dark:text-white">
             Skills
         </h2>
-        <div className='grid overflow-hidden items-center w-full'>
+        <div className='grid overflow-hidden items-center w-full ml-6'>
           <div className='flex'>
             <div className='flex'>
               <ul className='list-none flex-shrink-0 mx-auto flex items-center min-w-full marquee-group'>
