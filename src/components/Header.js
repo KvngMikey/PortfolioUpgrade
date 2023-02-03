@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-10">
-    <section className="max-w-[97%] lg:max-w-[85%] mx-auto p-4 flex justify-between items-baseline text-sm lg:text-base xl:text-lg">
+    <section className="max-w-[97%] lg:max-w-[85%] mx-auto py-4 px-1 lg:px-4 flex justify-between items-baseline text-sm lg:text-base xl:text-lg">
         <span className="uppercase hover:opacity-90">
            <a href="#about"> 👨‍💻 Michael Ariwaodo </a>
         </span>
