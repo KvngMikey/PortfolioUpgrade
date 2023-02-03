@@ -44,7 +44,7 @@ const About = () => {
        {/* <span className="font-bebas font-medium  uppercase">Front <br/> <span> ——— End</span> <br/> <span> Developer</span></span> */}
        </article>
        <article className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center ml-1 gap-8'>
-        <img className="w-full md:w-96 xl:w-[120%] h-40" src={deved} alt="cartoon-avatar"/>
+        <img className="w-full md:w-[30rem] xl:w-[124%] h-40" src={deved} alt="cartoon-avatar"/>
         {/* <span className='uppercase custom-style text-base md:text-xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's. When I'm not writing code, you can find me playing chess, fifa or watching Man Utd.</span> */}
         <span className='uppercase custom-style text-base md:text-2xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>
        </article> 

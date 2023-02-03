@@ -10,7 +10,7 @@ const marqueeVariants = {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 30,
+        duration: 10,
         ease: "linear",
       },
     },
@@ -25,10 +25,12 @@ const Footer = () => {
         <span>Feel free to reach out.</span>
     </div>
 
-    <div className='marquee'>
-      {/* <div className='flex text-center uppercase py-6 my-12 text-4xl border-y-2 border-solid border-black dark:border-white'> */}
+    <div className='marquee flex text-center uppercase py-6 my-12 text-9xl border-y-2 border-solid border-black dark:border-white'>
       <motion.div className='track' variants={marqueeVariants} animate="animate">
-        <h1> hello -- wanna work on something, hit me up - let's collaborate </h1>
+        <h1> hello —— wanna work on something, hit me up - let's collaborate </h1>
+      </motion.div>  
+      <motion.div className='track' variants={marqueeVariants} animate="animate">
+        <h1> hello —— wanna work on something, hit me up - let's collaborate </h1>
       </motion.div>  
     </div>
 
