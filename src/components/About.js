@@ -3,9 +3,9 @@ import deved from '../assets/about-pic.JPG'
 // import {AiFillTwitterCircle, AiFillLinkedin, AiFillMail} from 'react-icons/ai';
 
 const About = () => {
-  return (
-    <section id="about" className="flex flex-col-reverse justify-center sm:flex-col py-4 px-1 lg:px-4 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
-        {/* <article className="sm:w-1/2">
+    return (
+        <section id="about" className="flex flex-col-reverse justify-center sm:flex-col py-4 px-1 lg:px-4 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
+            {/* <article className="sm:w-1/2">
             <h2 className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
                 Michael Ariwaodo, <span className="text-indigo-700 dark:text-indigo-300">frontend software developer</span>.
             </h2>
@@ -37,19 +37,19 @@ const About = () => {
             </p>
         </article> 
         <img className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 " src={deved} alt="cartoon-avatar"/>    */}
-       <article className='font-bebas font-medium'>
-       <span className="text-9xl tracking-tight custom-style leading-[9rem] uppercase sm:hidden">Front ——— End Developer</span>
-       <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Front ——— End</span>
-       <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Developer</span>
-       {/* <span className="font-bebas font-medium  uppercase">Front <br/> <span> ——— End</span> <br/> <span> Developer</span></span> */}
-       </article>
-       <article className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center ml-1 gap-8'>
-        <img className="w-full md:w-[30rem] xl:w-[124%] h-40" src={deved} alt="cartoon-avatar"/>
-        {/* <span className='uppercase custom-style text-base md:text-xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's. When I'm not writing code, you can find me playing chess, fifa or watching Man Utd.</span> */}
-        <span className='uppercase custom-style text-base md:text-2xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>
-       </article> 
-    </section>
-  )
+            <article className='font-bebas font-medium'>
+                <span className="text-9xl tracking-tight custom-style leading-[9rem] uppercase sm:hidden">Front ——— End Developer</span>
+                <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Front ——— End</span>
+                <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Developer</span>
+                {/* <span className="font-bebas font-medium  uppercase">Front <br/> <span> ——— End</span> <br/> <span> Developer</span></span> */}
+            </article>
+            <article className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center ml-1 gap-8'>
+                <img className="w-full md:w-[30rem] xl:w-[124%] h-40" src={deved} alt="cartoon-avatar" />
+                {/* <span className='uppercase custom-style text-base md:text-xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's. When I'm not writing code, you can find me playing chess, fifa or watching Man Utd.</span> */}
+                <span className='uppercase custom-style text-base md:text-2xl leading-8 md:leading-10 font-medium tracking-wider'>Michael is a goal driven software developer whose interest is in using technology to build solutions to solve real world problems and passionate about building pixel perfect UI's.</span>
+            </article>
+        </section>
+    )
 }
 
 export default About
