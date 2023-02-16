@@ -2,6 +2,7 @@ import React from 'react'
 import { BsFillMoonStarsFill, BsCloudSun } from 'react-icons/bs';
 
 const Header = (props) => {
+
     function initApp() {
         const hamburgerBtn = document.getElementById('hamburger-button')
         const mobileMenu = document.getElementById('mobile-menu')
@@ -18,10 +19,18 @@ const Header = (props) => {
 
     document.addEventListener('DOMContentLoaded', initApp)
 
+    function handleMenuClick() {
+        const hamburgerBtn = document.getElementById('hamburger-button')
+        const mobileMenu = document.getElementById('mobile-menu')
+        mobileMenu.classList.toggle('hidden')
+        mobileMenu.classList.toggle('flex')
+        hamburgerBtn.classList.toggle('toggle-btn')
+    }
+
     return (
         <header className="sticky top-0 z-10">
             <section className="max-w-[97%] lg:max-w-[85%] mx-auto py-4 px-1 lg:px-4 flex justify-between items-baseline text-sm lg:text-base xl:text-lg">
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-2">
                     <span onClick={props.handleClick} className='cursor-pointer text-lg hover:text-orange-700'>
                         {props.data ? <BsFillMoonStarsFill /> : <BsCloudSun className='mb-2' />}
                     </span>
@@ -35,7 +44,7 @@ const Header = (props) => {
                     based in lagos nigeria
                 </span>
                 <div>
-                    <button id="hamburger-button" className="text-3xl md:hidden cursor-pointer relative w-8 h-8">
+                    <button onClick={initApp} id="hamburger-button" className="text-3xl md:hidden cursor-pointer relative w-8 h-8">
                         {/* &#9776; */}
                         <div className="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3
                 before:transition-all before:duration-500 
@@ -53,11 +62,9 @@ const Header = (props) => {
             &times;
         </button> */}
                 <nav className="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
-                    <a href="#" className="w-full text-center py-6 hover:opacity-90">Home</a>
-                    <a href="#rockets" className="w-full text-center py-6 hover:opacity-90">Our Rockets</a>
-                    <a href="#testimonials" className="w-full text-center py-6 hover:opacity-90">Testimonials</a>
-                    <a href="#contact" className="w-full text-center py-6 hover:opacity-90">Contact Us</a>
-                    <a href="#footer" className="w-full text-center py-6 hover:opacity-90">Legal</a>
+                    <a href="#work" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Work</a>
+                    <a href="#contact" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Contact</a>
+                    <a href="#" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Resume</a>
                 </nav>
             </section>
         </header>
