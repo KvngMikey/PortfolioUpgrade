@@ -1,41 +1,28 @@
-import React from 'react'
+import { React, useState } from 'react'
+import { Sling as Hamburger } from 'hamburger-react'
 import { BsFillMoonStarsFill, BsCloudSun } from 'react-icons/bs';
 
 const Header = (props) => {
 
-    function initApp() {
-        const hamburgerBtn = document.getElementById('hamburger-button')
-        const mobileMenu = document.getElementById('mobile-menu')
+    const [showMenu, setShowMenu] = useState(false);
 
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden')
-            mobileMenu.classList.toggle('flex')
-            hamburgerBtn.classList.toggle('toggle-btn')
-        }
-
-        hamburgerBtn.addEventListener('click', toggleMenu)
-        mobileMenu.addEventListener('click', toggleMenu)
+    function toggleMenu() {
+        setShowMenu(!showMenu);
     }
 
-    document.addEventListener('DOMContentLoaded', initApp)
-
     function handleMenuClick() {
-        const hamburgerBtn = document.getElementById('hamburger-button')
-        const mobileMenu = document.getElementById('mobile-menu')
-        mobileMenu.classList.toggle('hidden')
-        mobileMenu.classList.toggle('flex')
-        hamburgerBtn.classList.toggle('toggle-btn')
+        setShowMenu(false);
     }
 
     return (
         <header className="sticky top-0 z-10">
-            <section className="max-w-[97%] lg:max-w-[85%] mx-auto py-4 px-1 lg:px-4 flex justify-between items-baseline text-sm lg:text-base xl:text-lg">
+            <section className="max-w-[97%] lg:max-w-[85%] mx-auto py-4 px-1 lg:px-4 flex justify-between items-baseline text-sm relative z-10 lg:text-base xl:text-lg">
                 <span className="flex items-center gap-2">
                     <span onClick={props.handleClick} className='cursor-pointer text-lg hover:text-orange-700'>
                         {props.data ? <BsFillMoonStarsFill /> : <BsCloudSun className='mb-2' />}
                     </span>
                     {/* <a href="#about"> 👨‍💻 Michael Ariwaodo </a> */}
-                    <a href="#about" className='uppercase hover:opacity-90 self-baseline'> Michael Ariwaodo </a>
+                    <a href="#about" onClick={handleMenuClick} className='uppercase hover:opacity-90 self-baseline'> Michael Ariwaodo </a>
                 </span>
                 <span className="w-52 xl:w-56 hidden sm:flex cursor-default uppercase mt-3.5">
                     currently front-end developer at seech
@@ -44,12 +31,9 @@ const Header = (props) => {
                     based in lagos nigeria
                 </span>
                 <div>
-                    <button onClick={initApp} id="hamburger-button" className="text-3xl md:hidden cursor-pointer relative w-8 h-8">
-                        {/* &#9776; */}
-                        <div className="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3
-                before:transition-all before:duration-500 
-                after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500 "></div>
-                    </button>
+                    <div id="hamburger-button" className="md:hidden relative h-8">
+                        <Hamburger toggled={showMenu} toggle={toggleMenu} />
+                    </div>
                     <nav className="hidden md:block uppercase" aria-label="main">
                         <a href="#work" className="hover:text-orange-700">work, </a>
                         <a href="#contact" className="hover:text-orange-700">contact, </a>
@@ -57,16 +41,15 @@ const Header = (props) => {
                     </nav>
                 </div>
             </section>
-            <section id="mobile-menu" className="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-                {/* <button className="text-8xl self-end px-6">
-            &times;
-        </button> */}
-                <nav className="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
-                    <a href="#work" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Work</a>
-                    <a href="#contact" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Contact</a>
-                    <a href="#" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Resume</a>
-                </nav>
-            </section>
+            {showMenu && (
+                <section id="mobile-menu" className="absolute top-0 bg-stone-300 dark:bg-black w-full text-5xl justify-content-center">
+                    <nav className="flex flex-col h-screen items-center pt-32 origin-top animate-open-menu" aria-label="mobile">
+                        <a href="#work" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Work</a>
+                        <a href="#contact" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Contact</a>
+                        <a href="#" className="w-full text-center py-6 hover:opacity-90" onClick={handleMenuClick}>Resume</a>
+                    </nav>
+                </section>
+            )}
         </header>
     )
 }
