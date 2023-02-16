@@ -37,10 +37,10 @@ const About = () => {
             </p>
         </article> 
         <img className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 " src={deved} alt="cartoon-avatar"/>    */}
-            <article className='font-bebas font-medium'>
-                <span className="text-9xl tracking-tight custom-style leading-[9rem] uppercase sm:hidden">Front ——— End Developer</span>
-                <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Front ——— End</span>
-                <span className="text-[172px] lg:text-[186px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Developer</span>
+            <article className='font-bebas font-medium p-1 sm:p-0'>
+                <span className="text-8xl leading-[9rem] uppercase sm:hidden">Front ——— End Developer</span>
+                <span className="text-[176px] lg:text-[191px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Front ——— End</span>
+                <span className="text-[176px] lg:text-[191px] xl:text-[254px] custom-style hidden leading-[13rem] xl:leading-[16rem] sm:block">Developer</span>
                 {/* <span className="font-bebas font-medium  uppercase">Front <br/> <span> ——— End</span> <br/> <span> Developer</span></span> */}
             </article>
             <article className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center ml-1 gap-8'>
