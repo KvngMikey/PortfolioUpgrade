@@ -49,14 +49,14 @@ function App() {
                   <div className='flex'>
                     <ul className='list-none flex-shrink-0 mx-auto flex items-center min-w-full marquee-group'>
                       {skillsData.map(skill => {
-                        return <Skills key={skill.id} image={skill.img} />
+                        return <Skills key={skill.id} {...skill} />
                       })}
                     </ul>
                   </div>
                   <div className='flex'>
                     <ul className='list-none flex-shrink-0 mx-auto flex items-center min-w-full marquee-group'>
                       {skillsData.map(skill => {
-                        return <Skills key={skill.id} image={skill.img} />
+                        return <Skills key={skill.id} {...skill} />
                       })}
                     </ul>
                   </div>
