@@ -22,18 +22,22 @@ function App() {
     setDarkMode(!darkMode);
   }
 
-  useEffect(() => {
-    // Simulate an async operation that takes some time to complete
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
+  function doneLoading() {
+    setIsLoading(false);
+  }
+
+  // useEffect(() => {
+  //   // Simulate an async operation that takes some time to complete
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000);
+  // }, []);
 
   return (
     <div className={darkMode ? "dark" : ''}>
 
       {isLoading ? (
-        <Loading />
+        <Loading handleClick={doneLoading} />
       ) : (
         <div className="min-h-screen bg-stone-300 dark:bg-black dark:text-white">
           <Header handleClick={toggleMode} data={darkMode} />

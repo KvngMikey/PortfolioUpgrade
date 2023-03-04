@@ -15,7 +15,7 @@ const Header = (props) => {
     }
 
     return (
-        <header className="sticky top-0 z-10">
+        <header className="sticky top-0 z-10 bg-stone-300 dark:bg-black">
             <section className="max-w-[97%] lg:max-w-[85%] mx-auto py-4 px-1 lg:px-4 flex justify-between items-baseline text-sm relative z-10 lg:text-base xl:text-lg">
                 <span className="flex items-center gap-2">
                     <span onClick={props.handleClick} className='cursor-pointer text-lg hover:text-orange-700'>
